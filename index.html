@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <enlace rel="preconectar" href="https://fonts.googleapis.com">
+    <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+    <enlace href="https: //fonts.googleapis.com/css2? family= Montserrat:wght@600 & family= Roboto+Mono:ital@1 & family= Spectral:wght@500 & display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Juego del ahorcado</title>
+</head>
+<!-- header-->
+<body id="cuerpo">
+    <header class="iniciado">
+        <img src="imagenes/Logo.png" alt="logo" />
+        <br>
+        <br>
+        <br>
+        <div class="titulo">
+          <h1>Juego del ahorcado</h1>
+        </div>
+          </header>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br><br>
+    <!-- Botones  del inicio-->
+    <section class="inicio" id="pantalla-botones">
+        <div id class="botones-inicio">
+            <a href="#ahorcado">
+                <input type="submit" value="Iniciar juego" id="iniciar-juego" onclick="iniciarJuego()"
+                    class="botones" />
+            </a>
+            <br>
+            <br>
+            <input type="submit" value="Nueva Palabra" id="nueva-palabra" onclick="nuevaPalabra()" class="botones" />
+            </a>
+        </div>
+    </section>
+<br>
+<br>
+    <!-- Añadir nueva palabra -->
+    <section class="nueva-palabra" id="palabra-nueva">
+        <textarea class="nueva-palabra_textarea" id="nueva-palabra-secreta" cols="27" rows="1"
+            placeholder="Ingrese la palabra secreta" maxlength="10"></textarea>
+<br>
+        <div class="letras">
+            <p> ❕Máximo 10 letras.</p>
+        </div>
+<br>
+          <div class="boton_guardar_cancelar">
+            <button class="botones" id="boton-guardar" onclick="guardarPalabra()">Guardar y empezar</button>
+            <button class="botones" id="boton-cancelar" onclick="volverAlInicio()">Cancelar</button>
+          </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <!-- Canvas -->
+    <section class="canvas" id="pantalla-juego">
+        <canvas id="ahorcado" class="horca" width="294" height="360"> </canvas>
+        <canvas class="palabra" id="letrero" width="350" height="100"> </canvas>
+        <div class="nueva-palabra_botones">
+            <button class="botones" id="boton-nuevoJuego" onclick="iniciarJuego()">Nuevo juego</button>
+            <button class="botones" id="boton-salir" onclick="volverAlInicio()">Salir</button>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <!-- Footer-->
+<footer class="contenedor-footer">
+  <div class="Copyright">
+    <p>&copy Copyright Paola Alejandra Romero - Web Developer / 2023</p>
+    <br>
+    <a href="https://github.com/wx2re-f" target="_blank"><img src="imagenes/logo_github.png" alt="" /></a>
+    <a href="https://www.linkedin.com/in/paola-alejandra-romero-4a82a0105/" target="_blank"><img src="imagenes/logo_linkedin.png"
+            alt="" /></a>
+  </div>
+    </footer>
+<!-- JavaScript -->
+  <script src="horca.js"></script>
+  </body>
+</html>
